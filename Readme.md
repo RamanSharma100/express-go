@@ -1,5 +1,7 @@
-# express-go
+# express-go [Work in Progress]
 
+[![GitHub](https://img.shields.io/github/license/ramansharma100/express-go)](LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/ramansharma100/express-go)](https://github.com/ramansharma100/express-go/issues)
 [![Go Report Card](https://goreportcard.com/badge/github.com/ramansharma100/express-go)](https://goreportcard.com/report/github.com/ramansharma100/express-go)
 [![GoDoc](https://pkg.go.dev/badge/github.com/ramansharma100/express-go)](https://pkg.go.dev/github.com/ramansharma100/express-go)
 
