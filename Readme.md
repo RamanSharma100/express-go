@@ -44,6 +44,13 @@ This is lot of work in progress and will be updated frequently. Some of the upco
 - Support for plugins
 - Layout support
 
+## Upcoming Extended Features
+
+- CLI Support
+- Migrations Support
+- AI Studio Support
+- Will Add more...
+
 ## Installation
 
 ```bash
