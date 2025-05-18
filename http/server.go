@@ -42,7 +42,7 @@ func (s *Server) Listen(port int, callback func(int, error)) {
 func ErrorHandler(ctx *Context, err error) {
 	if ctx.Response != nil {
 		ctx.Response.StatusCode = http.StatusOK
-		ctx.Response.Json(map[string]string{
+		ctx.Response.Json(map[string]any{
 			"error": err.Error(),
 		})
 	}
@@ -52,5 +52,13 @@ func CreateServer() *Server {
 	return &Server{
 		Routes:       make(map[string][]Route),
 		ErrorHandler: ErrorHandler,
+		Request: &Request{
+			Headers:          make(map[string]string),
+			AdditionalFields: make(map[string]any),
+			Body:             nil,
+		},
+		Response: &Response{
+			Headers: make(map[string]string),
+		},
 	}
 }

@@ -18,12 +18,16 @@ A simple and lightweight HTTP server framework for Go, inspired by Node.js Expre
 - Add custom headers to requests and responses
 - Add additional fields to requests
 - Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
 
 ## Upcoming Features
 
 This is lot of work in progress and will be updated frequently. Some of the upcoming features include:
 
-- Improve Context handling
+- Nested routing
 - Rendering HTML templates
 - Support for query parameters
 - Support for URL parameters
@@ -37,7 +41,6 @@ This is lot of work in progress and will be updated frequently. Some of the upco
 - Rate limiting
 - Request validation
 - File uploads [multer like]
-- JSON parsing
 - URL encoding
 - WebSocket support
 - Support for mixins

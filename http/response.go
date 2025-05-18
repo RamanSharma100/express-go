@@ -1,6 +1,9 @@
 package http
 
-import "net/http"
+import (
+	"encoding/json"
+	"net/http"
+)
 
 func (res *Response) Send(text string) {
 	w := res.Writer
@@ -17,7 +20,7 @@ func (res *Response) Send(text string) {
 	w.Write([]byte(text))
 }
 
-func (res *Response) Json(data any) {
+func (res *Response) Json(data map[string]interface{}) {
 	w := res.Writer
 	w.Header().Set("Content-Type", "application/json")
 	for key, value := range res.Headers {
@@ -28,8 +31,15 @@ func (res *Response) Json(data any) {
 	}
 
 	w.WriteHeader(res.StatusCode)
-	w.Write([]byte(data.(string)))
 
+	jsonBytes, err := json.Marshal(data)
+
+	if err != nil {
+		http.Error(w, "Failed to marshal JSON", http.StatusInternalServerError)
+		return
+	}
+
+	w.Write(jsonBytes)
 }
 
 func (res *Response) AddHeader(key string, value interface{}) {

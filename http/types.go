@@ -7,7 +7,7 @@ type Request struct {
 	Method           string
 	Url              string
 	Headers          map[string]string
-	Body             string
+	Body             any
 	AdditionalFields map[string]any
 }
 
@@ -29,8 +29,10 @@ type ErrorHandlerType func(*Context, error)
 type Server struct {
 	Port         int
 	Address      string
-	Routes       map[string][]Route
+	Request      *Request
+	Response     *Response
 	ErrorHandler ErrorHandlerType
+	Routes       map[string][]Route
 }
 
 type HTTPMethod func(path string, handler Handler)
@@ -39,6 +41,7 @@ type Route struct {
 	Method  []string
 	Path    string
 	Handler Handler
+	Params  []string
 }
 type Router struct {
 	Routes map[string][]Route

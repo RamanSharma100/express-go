@@ -15,6 +15,58 @@ func main() {
 		ctx.Response.Send("Hello, World!" + ctx.Request.AdditionalFields["user"].(string))
 	})
 
+	app.Get("/:id", func(ctx *http.Context) {
+		params := ctx.GetParams()
+		ctx.Response.Json(
+			map[string]any{
+				"params": params,
+			},
+		)
+	})
+
+	app.Get("/user/:id", func(ctx *http.Context) {
+		ctx.Response.AddHeader("Content-Type", "application/json")
+		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
+		ctx.Response.Status(200).Json(
+			map[string]any{
+				"params": ctx.GetParams(),
+			},
+		)
+	})
+
+	app.Get("/user/:id/:name", func(ctx *http.Context) {
+		ctx.Response.AddHeader("Content-Type", "application/json")
+		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
+		ctx.Response.Status(200).Json(map[string]any{"context": ctx.GetParams()})
+	})
+
+	app.Get("/user", func(ctx *http.Context) {
+		ctx.Response.AddHeader("Content-Type", "application/json")
+		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
+		ctx.Response.Status(200).Send("Hello from user")
+	})
+
+	app.Post("/user", func(ctx *http.Context) {
+		ctx.Response.AddHeader("Content-Type", "application/json")
+		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
+		fmt.Println("Body:", ctx.GetBody())
+		ctx.Response.Status(200).Json(map[string]any{"body": ctx.GetBody()})
+	})
+
+	app.Put("/user", func(ctx *http.Context) {
+		ctx.Response.AddHeader("Content-Type", "application/json")
+		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
+		fmt.Println("Body:", ctx.GetBody())
+		ctx.Response.Status(200).Json(map[string]any{"body": ctx.Request.GetJsonBody()})
+	})
+
+	app.Patch("/user", func(ctx *http.Context) {
+		ctx.Response.AddHeader("Content-Type", "application/json")
+		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
+		fmt.Println("Body:", ctx.GetBody())
+		ctx.Response.Status(200).Json(map[string]any{"body": ctx.Request.GetJsonBody()})
+	})
+
 	app.Listen(8000, func(port int, err error) {
 		if err != nil {
 			panic(err)
