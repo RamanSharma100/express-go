@@ -25,11 +25,16 @@ A simple and lightweight HTTP server framework for Go, inspired by Node.js Expre
 - Nested routing
 - Create Router instances [For modular routing]
 - UseRouter function to use a router in the main application
+- HTML template rendering
 
 ## Upcoming Features
 
 This is lot of work in progress and will be updated frequently. Some of the upcoming features include:
 
+- Custom Template Engine Support
+- Custom Error Pages
+- Custom Error Handlers
+- Request logging
 - Route grouping
 - Route naming
 - Middleware chaining
@@ -91,7 +96,11 @@ func main() {
 	app := http.New()
 
 	app.Get("/", func(ctx *http.Context) {
-		ctx.Response.Send("Hello, World!")
+		ctx.Request.AddField("user", "Raman Sharma")
+		// ctx.Response.Send("Hello, World!" + ctx.Request.AdditionalFields["user"].(string))
+		ctx.Render("index.html", map[string]any{
+			"user": ctx.Request.AdditionalFields["user"],
+		})
 	})
 
 	app.UseRouter("/company", CompanyRouter())
@@ -197,6 +206,28 @@ func CompanyRouter() *http.Router {
 
 	return router
 }
+```
+
+```bash
+# templates/index.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Express GO</title>
+</head>
+
+<body>
+    <h1>Welcome to Express GO</h1>
+    <p>This is a simple Express GO application for go developers.</p>
+    <p>
+        User Logged In: <strong>{{.user}}</strong>
+    </p>
+</body>
+
+</html>
 ```
 
 ## API

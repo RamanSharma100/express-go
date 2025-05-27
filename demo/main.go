@@ -13,7 +13,10 @@ func main() {
 
 	app.Get("/", func(ctx *http.Context) {
 		ctx.Request.AddField("user", "Raman Sharma")
-		ctx.Response.Send("Hello, World!" + ctx.Request.AdditionalFields["user"].(string))
+		// ctx.Response.Send("Hello, World!" + ctx.Request.AdditionalFields["user"].(string))
+		ctx.Render("index.html", map[string]any{
+			"user": ctx.Request.AdditionalFields["user"],
+		})
 	})
 
 	app.Get("/:id", func(ctx *http.Context) {

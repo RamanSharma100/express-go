@@ -2,6 +2,7 @@ package utils
 
 import (
 	"errors"
+	"os"
 	"strconv"
 )
 
@@ -60,4 +61,16 @@ func ParseToFloat(data interface{}) (float64, error) {
 	default:
 		return 0, errors.New("unsupported type")
 	}
+}
+
+func GetRootDirectory() string {
+	rootDir, err := os.Getwd()
+	if err != nil {
+		panic("Failed to get current working directory: " + err.Error())
+	}
+
+	if rootDir[len(rootDir)-1] != '/' && rootDir[len(rootDir)-1] != '\\' {
+		rootDir += string(os.PathSeparator)
+	}
+	return rootDir
 }

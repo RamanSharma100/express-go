@@ -2,7 +2,12 @@ package http
 
 import (
 	"encoding/json"
+	"fmt"
+	"html/template"
 	"net/http"
+	"path"
+
+	"github.com/ramansharma100/express-go/utils"
 )
 
 func (ctx *Context) ParseBody() {
@@ -90,4 +95,27 @@ func (ctx *Context) Send(text string) {
 func (ctx *Context) Status(code int) {
 	ctx.Response.StatusCode = code
 	ctx.Response.Writer.WriteHeader(code)
+}
+
+func (ctx *Context) Render(tmpl string, data any) {
+	rootDir := utils.GetRootDirectory()
+	fmt.Println("Root Directory:", rootDir)
+	filePath := path.Join(rootDir, "templates", tmpl)
+	t, err := template.ParseFiles(filePath)
+	if err != nil {
+		ctx.Response.Writer.WriteHeader(http.StatusInternalServerError)
+		ctx.Response.Writer.Write([]byte("Error parsing template: " + err.Error()))
+		return
+	}
+
+	if data == nil {
+		data = map[string]any{}
+	}
+
+	err = t.Execute(ctx.Response.Writer, data)
+	if err != nil {
+		ctx.Response.Writer.WriteHeader(http.StatusInternalServerError)
+		ctx.Response.Writer.Write([]byte("Error executing template: " + err.Error()))
+		return
+	}
 }
