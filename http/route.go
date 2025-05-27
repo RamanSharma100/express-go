@@ -1,6 +1,7 @@
 package http
 
 import (
+	"fmt"
 	"strings"
 )
 
@@ -30,7 +31,7 @@ func (s *Server) getParameterizedRoute(path string) (string, []string) {
 	return strings.Join(parts, "/"), Params
 }
 
-func (s *Server) isParameterizedRoute(path string) bool {
+func isParameterizedRoute(path string) bool {
 	return strings.ContainsAny(path, ":")
 }
 
@@ -54,7 +55,9 @@ func (s *Server) AddRoute(path string, handler Handler, method []string) {
 
 			Params := []string{}
 
-			if s.isParameterizedRoute(path) {
+			fmt.Printf("🚀 %s Route loaded\n", path)
+
+			if isParameterizedRoute(path) {
 				path, Params = s.getParameterizedRoute(path)
 			}
 

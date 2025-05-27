@@ -1,89 +1,90 @@
 package http
 
-import (
-	"fmt"
-	"net/http"
-	"regexp"
-)
+import "strings"
 
-func (s *Server) GetParams(routePath, actualPath string) map[string]string {
-	params := make(map[string]string)
-
-	re := regexp.MustCompile(`\{([^\s/]+)\}`)
-	paramNames := re.FindAllStringSubmatch(routePath, -1)
-
-	pattern := re.ReplaceAllString(routePath, `([^/]+)`)
-	pattern = "^" + pattern + "$"
-	valueRe := regexp.MustCompile(pattern)
-
-	matches := valueRe.FindStringSubmatch(actualPath)
-	if matches == nil {
-		return params
-	}
-
-	for i, name := range paramNames {
-		if len(matches) > i+1 {
-			params[name[1]] = matches[i+1]
-		}
-	}
-
-	return params
+type Router struct {
+	Routes []Route
 }
 
-func (s *Server) GetHeaders(r *http.Request) map[string]string {
-	headers := make(map[string]string)
-	for key, values := range r.Header {
-		if len(values) > 0 {
-			headers[key] = values[0]
-		}
+func NewRouter() *Router {
+	return &Router{}
+}
+
+func (r *Router) ValidateRoute(path string, handler Handler) bool {
+	if path == "" {
+		panic("Path cannot be empty")
 	}
-	return headers
+	if handler == nil {
+		panic("Handler cannot be empty")
+	}
+
+	return true
 }
 
-func (s *Server) GetBasicResponseHeaders(method string) map[string]string {
-	headers := make(map[string]string)
-	headers["Content-Type"] = "application/json"
-	headers["Access-Control-Allow-Origin"] = "*"
-	headers["Access-Control-Allow-Methods"] = "GET"
-	headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
-	return headers
-}
-
-func (s *Server) HandleRoutes(w http.ResponseWriter, r *http.Request) {
-	for _, route := range s.Routes[r.Method] {
-
-		re := regexp.MustCompile(`\{[^\s/]+\}`)
-		path := re.ReplaceAllString(route.Path, "[^/]+")
-
-		if path[0] != '/' {
-			path = `/` + path
-		}
-
-		re = regexp.MustCompile(fmt.Sprintf(`^%s$`, path))
-
-		if re.MatchString(r.URL.Path) {
-
-			s.Request.Method = r.Method
-			s.Request.Url = r.URL.String()
-			s.Request.Headers = s.GetHeaders(r)
-			s.Request.r = r
-			s.Request.AdditionalFields = map[string]any{
-				"params": s.GetParams(route.Path, r.URL.Path),
-			}
-
-			s.Response.Writer = w
-			s.Response.StatusCode = 0
-			s.Response.Headers = s.GetBasicResponseHeaders(r.Method)
-
-			ctx := &Context{
-				Request:  s.Request,
-				Response: s.Response,
-			}
-
-			route.Handler(ctx)
-			return
+func (r *Router) getParameterizedRoute(path string) (string, []string) {
+	Params := []string{}
+	parts := strings.Split(path, "/")
+	for i, part := range parts {
+		if strings.HasPrefix(part, ":") {
+			paramName := strings.TrimPrefix(part, ":")
+			Params = append(Params, paramName)
+			parts[i] = "{" + paramName + "}"
 		}
 	}
 
-	w.Write([]byte("404 Not Found"))
+	return strings.Join(parts, "/"), Params
+}
+
+func (r *Router) AddRoute(path string, handler Handler, method []string) {
+	if r.ValidateRoute(path, handler) {
+
+		if len(method) == 0 {
+			method = []string{"GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS", "HEAD"}
+		}
+
+		params := []string{}
+
+		if isParameterizedRoute(path) {
+			path, params = r.getParameterizedRoute(path)
+		}
+
+		r.Routes = append(r.Routes, Route{
+			Method:  method,
+			Path:    path,
+			Handler: handler,
+			Params:  params,
+		})
+	}
+}
+
+func (r *Router) Get(path string, handler Handler) {
+	r.AddRoute(path, handler, []string{"GET"})
+}
+
+func (r *Router) Post(path string, handler Handler) {
+	r.AddRoute(path, handler, []string{"POST"})
+}
+
+func (r *Router) Put(path string, handler Handler) {
+	r.AddRoute(path, handler, []string{"PUT"})
+}
+
+func (r *Router) Delete(path string, handler Handler) {
+	r.AddRoute(path, handler, []string{"DELETE"})
+}
+
+func (r *Router) Patch(path string, handler Handler) {
+	r.AddRoute(path, handler, []string{"PATCH"})
+}
+
+func (r *Router) Options(path string, handler Handler) {
+	r.AddRoute(path, handler, []string{"OPTIONS"})
+}
+
+func (r *Router) Head(path string, handler Handler) {
+	r.AddRoute(path, handler, []string{"HEAD"})
+}
+
+func (r *Router) Add(path string, handler Handler) {
+	r.AddRoute(path, handler, []string{"GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS", "HEAD"})
 }

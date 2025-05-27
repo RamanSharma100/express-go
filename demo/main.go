@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
+	"github.com/ramansharma100/express-go/demo/routes"
 	"github.com/ramansharma100/express-go/http"
 )
 
@@ -23,6 +24,8 @@ func main() {
 			},
 		)
 	})
+
+	app.UseRouter("/company", routes.CompanyRouter())
 
 	app.Get("/user/:id", func(ctx *http.Context) {
 		ctx.Response.AddHeader("Content-Type", "application/json")

@@ -43,6 +43,13 @@ type Route struct {
 	Handler Handler
 	Params  []string
 }
-type Router struct {
-	Routes map[string][]Route
+type ApplicationRouter struct {
+	Get     HTTPMethod
+	Post    HTTPMethod
+	Put     HTTPMethod
+	Delete  HTTPMethod
+	Patch   HTTPMethod
+	Options HTTPMethod
+	Head    HTTPMethod
+	Add     HTTPMethod
 }
