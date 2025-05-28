@@ -62,10 +62,11 @@ func (s *Server) AddRoute(path string, handler Handler, method []string) {
 			}
 
 			s.Routes[m] = append(s.Routes[m], Route{
-				Method:  method,
-				Path:    path,
-				Handler: handler,
-				Params:  Params,
+				Method:      method,
+				Path:        path,
+				Handler:     handler,
+				Params:      Params,
+				Middlewares: append([]Middleware{}, s.Middlewares...),
 			})
 			s.Routes[m] = sortRoutesWithParamsLast(s.Routes[m])
 		}

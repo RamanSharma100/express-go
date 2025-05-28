@@ -41,10 +41,11 @@ type Server struct {
 type HTTPMethod func(path string, handler Handler)
 
 type Route struct {
-	Method  []string
-	Path    string
-	Handler Handler
-	Params  []string
+	Method      []string
+	Path        string
+	Handler     Handler
+	Params      []string
+	Middlewares []Middleware
 }
 type ApplicationRouter struct {
 	Get     HTTPMethod

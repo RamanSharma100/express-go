@@ -109,7 +109,7 @@ func (s *Server) HandleRoutes(w http.ResponseWriter, r *http.Request) {
 				Response: s.Response,
 			}
 
-			middlewares := s.Middlewares
+			middlewares := route.Middlewares
 			handler := route.Handler
 
 			chainMiddlewares(middlewares, handler)(ctx)
