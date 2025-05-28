@@ -11,12 +11,22 @@ import (
 func main() {
 	app := http.New()
 
+	app.Use(func(ctx *http.Context, next func()) {
+		fmt.Println("Middleware 1")
+		next()
+	})
+
 	app.Get("/", func(ctx *http.Context) {
 		ctx.Request.AddField("user", "Raman Sharma")
 		// ctx.Response.Send("Hello, World!" + ctx.Request.AdditionalFields["user"].(string))
 		ctx.Render("index.html", map[string]any{
 			"user": ctx.Request.AdditionalFields["user"],
 		})
+	})
+
+	app.Use(func(ctx *http.Context, next func()) {
+		fmt.Println("Middleware 2")
+		next()
 	})
 
 	app.Get("/:id", func(ctx *http.Context) {

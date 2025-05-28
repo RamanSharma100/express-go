@@ -8,6 +8,7 @@ type Application struct {
 	Patch   HTTPMethod
 	Delete  HTTPMethod
 	Options HTTPMethod
+	Use     func(middleware Middleware)
 }
 
 func New() *Application {
@@ -20,6 +21,7 @@ func New() *Application {
 		Patch:   server.Patch,
 		Delete:  server.Delete,
 		Options: server.Options,
+		Use:     server.Use,
 	}
 }
 
@@ -31,6 +33,7 @@ func (app *Application) Router() *ApplicationRouter {
 		Delete:  app.Delete,
 		Patch:   app.Patch,
 		Options: app.Options,
+		Use:     app.Use,
 	}
 }
 

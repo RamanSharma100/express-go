@@ -49,6 +49,22 @@ func (s *Server) GetBasicResponseHeaders(method string) map[string]string {
 	return headers
 }
 
+func chainMiddlewares(middlewares []Middleware, handler Handler) Handler {
+	return func(ctx *Context) {
+		var exec func(index int)
+		exec = func(index int) {
+			if index < len(middlewares) {
+				middlewares[index](ctx, func() {
+					exec(index + 1)
+				})
+			} else {
+				handler(ctx)
+			}
+		}
+		exec(0)
+	}
+}
+
 func (s *Server) HandleRoutes(w http.ResponseWriter, r *http.Request) {
 	for _, route := range s.Routes[r.Method] {
 
@@ -93,10 +109,14 @@ func (s *Server) HandleRoutes(w http.ResponseWriter, r *http.Request) {
 				Response: s.Response,
 			}
 
-			route.Handler(ctx)
+			middlewares := s.Middlewares
+			handler := route.Handler
+
+			chainMiddlewares(middlewares, handler)(ctx)
 			return
 		}
 	}
 
+	w.WriteHeader(http.StatusNotFound)
 	w.Write([]byte("404 Not Found"))
 }

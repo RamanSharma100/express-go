@@ -103,3 +103,10 @@ func (s *Server) Head(path string, handler Handler) {
 func (s *Server) Add(path string, handler Handler) {
 	s.AddRoute(path, handler, []string{"GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS", "HEAD"})
 }
+
+func (s *Server) Use(middleware Middleware) {
+	if middleware == nil {
+		panic("Middleware cannot be nil")
+	}
+	s.Middlewares = append(s.Middlewares, middleware)
+}

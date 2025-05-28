@@ -26,6 +26,8 @@ type Handler func(*Context)
 
 type ErrorHandlerType func(*Context, error)
 
+type Middleware func(ctx *Context, next func())
+
 type Server struct {
 	Port         int
 	Address      string
@@ -33,6 +35,7 @@ type Server struct {
 	Response     *Response
 	ErrorHandler ErrorHandlerType
 	Routes       map[string][]Route
+	Middlewares  []Middleware
 }
 
 type HTTPMethod func(path string, handler Handler)
@@ -52,4 +55,5 @@ type ApplicationRouter struct {
 	Options HTTPMethod
 	Head    HTTPMethod
 	Add     HTTPMethod
+	Use     func(middleware Middleware)
 }
