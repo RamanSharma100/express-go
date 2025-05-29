@@ -3,7 +3,8 @@ package http
 import "strings"
 
 type Router struct {
-	Routes []Route
+	routes      []Route
+	middlewares []Middleware
 }
 
 func NewRouter() *Router {
@@ -48,11 +49,12 @@ func (r *Router) AddRoute(path string, handler Handler, method []string) {
 			path, params = r.getParameterizedRoute(path)
 		}
 
-		r.Routes = append(r.Routes, Route{
-			Method:  method,
-			Path:    path,
-			Handler: handler,
-			Params:  params,
+		r.routes = append(r.routes, Route{
+			Method:      method,
+			Path:        path,
+			Handler:     handler,
+			Params:      params,
+			Middlewares: append([]Middleware{}, r.middlewares...),
 		})
 	}
 }
@@ -87,4 +89,41 @@ func (r *Router) Head(path string, handler Handler) {
 
 func (r *Router) Add(path string, handler Handler) {
 	r.AddRoute(path, handler, []string{"GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS", "HEAD"})
+}
+
+func (r *Router) UseRouter(path string, router *Router) {
+	if router == nil {
+		return
+	}
+
+	if path == "" || path[0] != '/' {
+		path = "/" + path
+	}
+
+	for _, route := range router.routes {
+		if route.Path != "/" && route.Path[0] != '/' {
+			route.Path = "/" + route.Path
+		}
+		fullPath := path + route.Path
+		r.AddRoute(fullPath, route.Handler, route.Method)
+	}
+}
+
+func (r *Router) Use(middlewares ...Middleware) {
+	if middlewares == nil {
+		panic("Middleware cannot be nil")
+	}
+	r.middlewares = append(r.middlewares, middlewares...)
+}
+
+func (r *Router) Group(prefix string, middlewares []Middleware, handler func(router *Router)) {
+	router := &Router{
+		routes: []Route{},
+	}
+
+	r.Use(middlewares...)
+
+	handler(router)
+
+	r.UseRouter(prefix, router)
 }

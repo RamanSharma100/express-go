@@ -47,14 +47,3 @@ type Route struct {
 	Params      []string
 	Middlewares []Middleware
 }
-type ApplicationRouter struct {
-	Get     HTTPMethod
-	Post    HTTPMethod
-	Put     HTTPMethod
-	Delete  HTTPMethod
-	Patch   HTTPMethod
-	Options HTTPMethod
-	Head    HTTPMethod
-	Add     HTTPMethod
-	Use     func(middleware Middleware)
-}

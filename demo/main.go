@@ -8,11 +8,21 @@ import (
 	"github.com/ramansharma100/express-go/http"
 )
 
+func middlewareTest1(ctx *http.Context, next func()) {
+	fmt.Println("Middleware Group Test 1")
+	next()
+}
+
+func middlewareTest2(ctx *http.Context, next func()) {
+	fmt.Println("Middleware Group Test 2")
+	next()
+}
+
 func main() {
 	app := http.New()
 
 	app.Use(func(ctx *http.Context, next func()) {
-		fmt.Println("Middleware 1")
+		fmt.Println("Middleware Global 1")
 		next()
 	})
 
@@ -25,8 +35,23 @@ func main() {
 	})
 
 	app.Use(func(ctx *http.Context, next func()) {
-		fmt.Println("Middleware 2")
+		fmt.Println("Middleware Global 2")
 		next()
+	})
+
+	// use groups to add
+	app.Group("/test", []http.Middleware{middlewareTest1, middlewareTest2}, func(router *http.Router) {
+		router.Get("/", func(ctx *http.Context) {
+			ctx.Response.AddHeader("Content-Type", "application/json")
+			ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
+			ctx.Response.Status(200).Json(map[string]any{"message": "Hello from test group!"})
+		})
+
+		router.Get("/info", func(ctx *http.Context) {
+			ctx.Response.AddHeader("Content-Type", "application/json")
+			ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
+			ctx.Response.Status(200).Json(map[string]any{"info": "Test group information."})
+		})
 	})
 
 	app.Get("/:id", func(ctx *http.Context) {
@@ -54,26 +79,6 @@ func main() {
 		ctx.Response.AddHeader("Content-Type", "application/json")
 		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
 		ctx.Response.Status(200).Json(map[string]any{"context": ctx.GetParams()})
-	})
-
-	app.Get("/user", func(ctx *http.Context) {
-		ctx.Response.AddHeader("Content-Type", "application/json")
-		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
-		ctx.Response.Status(200).Send("Hello from user")
-	})
-
-	app.Post("/user", func(ctx *http.Context) {
-		ctx.Response.AddHeader("Content-Type", "application/json")
-		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
-		fmt.Println("Body:", ctx.GetBody())
-		ctx.Response.Status(200).Json(map[string]any{"body": ctx.GetBody()})
-	})
-
-	app.Put("/user", func(ctx *http.Context) {
-		ctx.Response.AddHeader("Content-Type", "application/json")
-		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
-		fmt.Println("Body:", ctx.GetBody())
-		ctx.Response.Status(200).Json(map[string]any{"body": ctx.Request.GetJsonBody()})
 	})
 
 	app.Patch("/user", func(ctx *http.Context) {

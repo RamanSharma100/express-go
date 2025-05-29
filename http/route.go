@@ -73,6 +73,45 @@ func (s *Server) AddRoute(path string, handler Handler, method []string) {
 	}
 }
 
+func (s *Server) AddRouteWithRouter(path string, router *Router) {
+	if router == nil {
+		return
+	}
+
+	if path == "" || path[0] != '/' {
+		path = "/" + path
+	}
+
+	for _, route := range router.routes {
+		if s.ValidateRoute(path, route.Handler) {
+			for _, m := range route.Method {
+				if _, ok := s.Routes[m]; !ok {
+					s.Routes[m] = []Route{}
+				}
+
+				Params := []string{}
+
+				fmt.Printf("🚀 %s Route loaded\n", path)
+
+				if isParameterizedRoute(path) {
+					path, Params = s.getParameterizedRoute(path)
+				}
+
+				middlewares := s.Middlewares
+
+				s.Routes[m] = append(s.Routes[m], Route{
+					Method:      route.Method,
+					Path:        path,
+					Handler:     route.Handler,
+					Params:      Params,
+					Middlewares: append(middlewares, route.Middlewares...),
+				})
+				s.Routes[m] = sortRoutesWithParamsLast(s.Routes[m])
+			}
+		}
+	}
+}
+
 func (s *Server) Get(path string, handler Handler) {
 	s.AddRoute(path, handler, []string{"GET"})
 }
@@ -105,9 +144,28 @@ func (s *Server) Add(path string, handler Handler) {
 	s.AddRoute(path, handler, []string{"GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS", "HEAD"})
 }
 
-func (s *Server) Use(middleware Middleware) {
-	if middleware == nil {
+func (s *Server) Use(middlewares ...Middleware) {
+	if middlewares == nil {
 		panic("Middleware cannot be nil")
 	}
-	s.Middlewares = append(s.Middlewares, middleware)
+	s.Middlewares = append(s.Middlewares, middlewares...)
+}
+
+func (s *Server) UseRouter(path string, router *Router) {
+	if router == nil {
+		return
+	}
+
+	if path == "" || path[0] != '/' {
+		path = "/" + path
+	}
+
+	for _, route := range router.routes {
+		if route.Path != "/" && route.Path[0] != '/' {
+			route.Path = "/" + route.Path
+		}
+		fullPath := path + route.Path
+
+		s.AddRoute(fullPath, route.Handler, route.Method)
+	}
 }
