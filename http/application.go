@@ -1,29 +1,31 @@
 package http
 
 type Application struct {
-	Listen    func(port int, callback func(int, error))
-	Get       HTTPMethod
-	Post      HTTPMethod
-	Put       HTTPMethod
-	Patch     HTTPMethod
-	Delete    HTTPMethod
-	Options   HTTPMethod
-	Use       func(middlewares ...Middleware)
-	UseRouter func(prefix string, router *Router)
+	Listen          func(port int, callback func(int, error))
+	Get             HTTPMethod
+	Post            HTTPMethod
+	Put             HTTPMethod
+	Patch           HTTPMethod
+	Delete          HTTPMethod
+	Options         HTTPMethod
+	Use             func(middlewares ...Middleware)
+	UseRouter       func(prefix string, router *Router)
+	SetErrorHandler func(handler ErrorHandlerType)
 }
 
 func New() *Application {
 	server := CreateServer()
 	return &Application{
-		Listen:    server.Listen,
-		Get:       server.Get,
-		Post:      server.Post,
-		Put:       server.Put,
-		Patch:     server.Patch,
-		Delete:    server.Delete,
-		Options:   server.Options,
-		Use:       server.Use,
-		UseRouter: server.UseRouter,
+		Listen:          server.Listen,
+		Get:             server.Get,
+		Post:            server.Post,
+		Put:             server.Put,
+		Patch:           server.Patch,
+		Delete:          server.Delete,
+		Options:         server.Options,
+		Use:             server.Use,
+		UseRouter:       server.UseRouter,
+		SetErrorHandler: server.SetErrorHandler,
 	}
 }
 

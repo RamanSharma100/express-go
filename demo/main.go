@@ -26,6 +26,15 @@ func main() {
 		next()
 	})
 
+	// Set a custom error handler
+	app.SetErrorHandler(func(ctx *http.Context, err error) {
+		fmt.Println("Error Handler:", err)
+		ctx.Response.Status(500).Json(map[string]any{
+			"error":   err.Error(),
+			"message": "An error occurred from custom error handler",
+		})
+	})
+
 	app.Get("/", func(ctx *http.Context) {
 		ctx.Request.AddField("user", "Raman Sharma")
 		// ctx.Response.Send("Hello, World!" + ctx.Request.AdditionalFields["user"].(string))
@@ -37,6 +46,10 @@ func main() {
 	app.Use(func(ctx *http.Context, next func()) {
 		fmt.Println("Middleware Global 2")
 		next()
+	})
+
+	app.Get("/error", func(ctx *http.Context) {
+		panic("This is a test error")
 	})
 
 	// use groups to add

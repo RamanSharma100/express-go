@@ -112,7 +112,29 @@ func (s *Server) HandleRoutes(w http.ResponseWriter, r *http.Request) {
 			middlewares := route.Middlewares
 			handler := route.Handler
 
-			chainMiddlewares(middlewares, handler)(ctx)
+			handlerWithErrorSafety := func(ctx *Context) {
+				defer func() {
+					if errRecovery := recover(); errRecovery != nil {
+						var err error
+						switch e := errRecovery.(type) {
+						case error:
+							err = e
+						default:
+							err = fmt.Errorf("%v", e)
+						}
+						if s.ErrorHandler != nil {
+							s.ErrorHandler(ctx, err)
+						} else {
+							ctx.Response.StatusCode = http.StatusInternalServerError
+							ctx.Response.Writer.WriteHeader(http.StatusInternalServerError)
+							ctx.Response.Writer.Write([]byte(fmt.Sprintf("Internal Server Error: %v", err)))
+						}
+					}
+				}()
+				handler(ctx)
+			}
+
+			chainMiddlewares(middlewares, handlerWithErrorSafety)(ctx)
 			return
 		}
 	}

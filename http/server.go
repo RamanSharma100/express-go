@@ -39,19 +39,17 @@ func (s *Server) Listen(port int, callback func(int, error)) {
 	select {} // this will prevent the main goroutine from exiting
 }
 
-func ErrorHandler(ctx *Context, err error) {
-	if ctx.Response != nil {
-		ctx.Response.StatusCode = http.StatusOK
-		ctx.Response.Json(map[string]any{
-			"error": err.Error(),
-		})
-	}
+func basicErrorHandler(ctx *Context, err error) {
+	ctx.Response.StatusCode = http.StatusOK
+	ctx.Response.Json(map[string]any{
+		"error": err.Error(),
+	})
 }
 
 func CreateServer() *Server {
 	return &Server{
 		Routes:       make(map[string][]Route),
-		ErrorHandler: ErrorHandler,
+		ErrorHandler: basicErrorHandler,
 		Request: &Request{
 			Headers:          make(map[string]string),
 			AdditionalFields: make(map[string]any),
@@ -61,4 +59,8 @@ func CreateServer() *Server {
 			Headers: make(map[string]string),
 		},
 	}
+}
+
+func (s *Server) SetErrorHandler(handler ErrorHandlerType) {
+	s.ErrorHandler = handler
 }

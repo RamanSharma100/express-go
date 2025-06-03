@@ -30,20 +30,18 @@ A simple and lightweight MVC Web framework for Go, inspired by Node.js Express a
 - Grouping of routes with middleware
 - Support for URL parameters
 - Middleware Chaining
+- Custom Error handling [Panic handling]
 
 ## Upcoming Features
 
 This is lot of work in progress and will be updated frequently. Some of the upcoming features include:
 
 - Custom Template Engine Support
-- Custom Error Pages
-- Custom Error Handlers
 - Request logging
 - Route naming
 - Embedding Middleware in Route groups
 - Support for query parameters
 - Support for cookies
-- Custom Error handling
 - Static file serving
 - Session management
 - CORS support
@@ -108,6 +106,16 @@ func main() {
 		next()
 	})
 
+	// Set a custom error handler
+	app.SetErrorHandler(func(ctx *http.Context, err error) {
+		fmt.Println("Error Handler:", err)
+		ctx.Response.Status(500).Json(map[string]any{
+			"error":   err.Error(),
+			"message": "An error occurred from custom error handler",
+		})
+	})
+
+
 	app.Get("/", func(ctx *http.Context) {
 		ctx.Request.AddField("user", "Raman Sharma")
 		// ctx.Response.Send("Hello, World!" + ctx.Request.AdditionalFields["user"].(string))
@@ -119,6 +127,10 @@ func main() {
 	app.Use(func(ctx *http.Context, next func()) {
 		fmt.Println("Middleware Global 2")
 		next()
+	})
+
+	app.Get("/error", func(ctx *http.Context) {
+		panic("This is a test error")
 	})
 
 	// use groups to add
