@@ -20,19 +20,19 @@ func CompanyRouter() *http.Router {
 	router := http.NewRouter()
 
 	router.Use(func(ctx *http.Context, next func()) {
-		fmt.Println("Middleware  Router Global 2")
+		fmt.Println("Middleware  Router Global 1")
 		next()
 	})
 
 	// // use groups to add
-	router.Group("/test", []http.Middleware{middlewareTest1, middlewareTest2}, func(router *http.Router) {
-		router.Get("/", func(ctx *http.Context) {
+	router.Group("/test", []http.Middleware{middlewareTest1, middlewareTest2}, func(r *http.Router) {
+		r.Get("/", func(ctx *http.Context) {
 			ctx.Response.AddHeader("Content-Type", "application/json")
 			ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
 			ctx.Response.Status(200).Json(map[string]any{"message": "Hello from test group!"})
 		})
 
-		router.Get("/info", func(ctx *http.Context) {
+		r.Get("/info", func(ctx *http.Context) {
 			ctx.Response.AddHeader("Content-Type", "application/json")
 			ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
 			ctx.Response.Status(200).Json(map[string]any{"info": "Test group information."})
@@ -49,6 +49,11 @@ func CompanyRouter() *http.Router {
 		ctx.Response.AddHeader("Content-Type", "application/json")
 		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
 		ctx.Response.Status(200).Json(map[string]any{"info": "Company information goes here."})
+	})
+
+	router.Use(func(ctx *http.Context, next func()) {
+		fmt.Println("Middleware  Router Global 2")
+		next()
 	})
 
 	router.Post("/create", func(ctx *http.Context) {

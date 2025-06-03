@@ -54,6 +54,11 @@ func main() {
 		})
 	})
 
+	app.Use(func(ctx *http.Context, next func()) {
+		fmt.Println("Middleware Global 3")
+		next()
+	})
+
 	app.Get("/:id", func(ctx *http.Context) {
 		params := ctx.GetParams()
 		ctx.Response.Json(
