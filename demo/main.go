@@ -26,6 +26,11 @@ func main() {
 		next()
 	})
 
+	// add cors middleware
+	app.Use(http.CORS(&http.CorsOptions{
+		AllowOrigin: "http://localhost:8000,http://localhost:8080",
+	}))
+
 	// Set a custom error handler
 	app.SetErrorHandler(func(ctx *http.Context, err error) {
 		fmt.Println("Error Handler:", err)

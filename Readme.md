@@ -33,6 +33,7 @@ A simple and lightweight MVC Web framework for Go, inspired by Node.js Express a
 - Request validation
 - Embedding Middleware in Route groups
 - Custom Error handling [Panic handling]
+- CORS support
 
 ## Upcoming Features
 
@@ -45,7 +46,6 @@ This is lot of work in progress and will be updated frequently. Some of the upco
 - Support for cookies
 - Static file serving
 - Session management
-- CORS support
 - Rate limiting
 - File uploads [multer like]
 - URL encoding/decoding
@@ -105,6 +105,11 @@ func main() {
 		fmt.Println("Middleware Global 1")
 		next()
 	})
+
+	// add cors middleware
+	app.Use(http.CORS(&http.CorsOptions{
+		AllowOrigin: "http://localhost:8000,http://localhost:8080",
+	}))
 
 	// Set a custom error handler
 	app.SetErrorHandler(func(ctx *http.Context, err error) {
