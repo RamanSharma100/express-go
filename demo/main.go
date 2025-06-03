@@ -102,8 +102,19 @@ func main() {
 	app.Patch("/user", func(ctx *http.Context) {
 		ctx.Response.AddHeader("Content-Type", "application/json")
 		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
-		fmt.Println("Body:", ctx.GetBody())
-		ctx.Response.Status(200).Json(map[string]any{"body": ctx.Request.GetJsonBody()})
+		body := ctx.Request.GetJsonBody()
+		// validate the request body
+		errors := ctx.Request.Validate(map[string]string{
+			"name":  "required|string",
+			"email": "required|email",
+		}, body)
+
+		if len(errors) > 0 {
+			ctx.Response.Status(400).Json(map[string]any{"errors": errors})
+			return
+		}
+
+		ctx.Response.Status(200).Json(map[string]any{"body": body})
 	})
 
 	app.Listen(8000, func(port int, err error) {

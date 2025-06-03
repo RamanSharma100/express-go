@@ -30,6 +30,8 @@ A simple and lightweight MVC Web framework for Go, inspired by Node.js Express a
 - Grouping of routes with middleware
 - Support for URL parameters
 - Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
 - Custom Error handling [Panic handling]
 
 ## Upcoming Features
@@ -39,14 +41,12 @@ This is lot of work in progress and will be updated frequently. Some of the upco
 - Custom Template Engine Support
 - Request logging
 - Route naming
-- Embedding Middleware in Route groups
 - Support for query parameters
 - Support for cookies
 - Static file serving
 - Session management
 - CORS support
 - Rate limiting
-- Request validation
 - File uploads [multer like]
 - URL encoding/decoding
 - WebSocket support
@@ -183,8 +183,19 @@ func main() {
 	app.Patch("/user", func(ctx *http.Context) {
 		ctx.Response.AddHeader("Content-Type", "application/json")
 		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
-		fmt.Println("Body:", ctx.GetBody())
-		ctx.Response.Status(200).Json(map[string]any{"body": ctx.Request.GetJsonBody()})
+		body := ctx.Request.GetJsonBody()
+		// validate the request body
+		errors := ctx.Request.Validate(map[string]string{
+			"name":  "required|string",
+			"email": "required|email",
+		}, body)
+
+		if len(errors) > 0 {
+			ctx.Response.Status(400).Json(map[string]any{"errors": errors})
+			return
+		}
+
+		ctx.Response.Status(200).Json(map[string]any{"body": body})
 	})
 
 	app.Listen(8000, func(port int, err error) {
