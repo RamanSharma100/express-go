@@ -5,10 +5,10 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/ramansharma100/express-go)](https://goreportcard.com/report/github.com/ramansharma100/express-go)
 [![GoDoc](https://pkg.go.dev/badge/github.com/ramansharma100/express-go)](https://pkg.go.dev/github.com/ramansharma100/express-go)
 
-A simple and lightweight HTTP server framework for Go, inspired by Node.js Express. It provides a minimalistic API for building web applications and APIs with ease.
+A simple and lightweight MVC Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
 
 > - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
-> - The API is inspired by Express.js, but it is not a direct port. Some features may be different or missing.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
 
 ## Features
 
@@ -26,6 +26,10 @@ A simple and lightweight HTTP server framework for Go, inspired by Node.js Expre
 - Create Router instances [For modular routing]
 - UseRouter function to use a router in the main application
 - HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
 
 ## Upcoming Features
 
@@ -35,13 +39,10 @@ This is lot of work in progress and will be updated frequently. Some of the upco
 - Custom Error Pages
 - Custom Error Handlers
 - Request logging
-- Route grouping
 - Route naming
-- Middleware chaining
 - Embedding Middleware in Route groups
 - Support for query parameters
 - Support for cookies
-- Middleware support
 - Custom Error handling
 - Static file serving
 - Session management
@@ -89,8 +90,23 @@ import (
 	"github.com/ramansharma100/express-go/http"
 )
 
+func middlewareTest1(ctx *http.Context, next func()) {
+	fmt.Println("Middleware Group Test 1")
+	next()
+}
+
+func middlewareTest2(ctx *http.Context, next func()) {
+	fmt.Println("Middleware Group Test 2")
+	next()
+}
+
 func main() {
 	app := http.New()
+
+	app.Use(func(ctx *http.Context, next func()) {
+		fmt.Println("Middleware Global 1")
+		next()
+	})
 
 	app.Get("/", func(ctx *http.Context) {
 		ctx.Request.AddField("user", "Raman Sharma")
@@ -100,7 +116,41 @@ func main() {
 		})
 	})
 
-	app.UseRouter("/company", CompanyRouter())
+	app.Use(func(ctx *http.Context, next func()) {
+		fmt.Println("Middleware Global 2")
+		next()
+	})
+
+	// use groups to add
+	app.Group("/test", []http.Middleware{middlewareTest1, middlewareTest2}, func(router *http.Router) {
+		router.Get("/", func(ctx *http.Context) {
+			ctx.Response.AddHeader("Content-Type", "application/json")
+			ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
+			ctx.Response.Status(200).Json(map[string]any{"message": "Hello from test group!"})
+		})
+
+		router.Get("/info", func(ctx *http.Context) {
+			ctx.Response.AddHeader("Content-Type", "application/json")
+			ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
+			ctx.Response.Status(200).Json(map[string]any{"info": "Test group information."})
+		})
+	})
+
+	app.Use(func(ctx *http.Context, next func()) {
+		fmt.Println("Middleware Global 3")
+		next()
+	})
+
+	app.Get("/:id", func(ctx *http.Context) {
+		params := ctx.GetParams()
+		ctx.Response.Json(
+			map[string]any{
+				"params": params,
+			},
+		)
+	})
+
+	app.UseRouter("/company", routes.CompanyRouter())
 
 	app.Get("/user/:id", func(ctx *http.Context) {
 		ctx.Response.AddHeader("Content-Type", "application/json")
@@ -118,26 +168,6 @@ func main() {
 		ctx.Response.Status(200).Json(map[string]any{"context": ctx.GetParams()})
 	})
 
-	app.Get("/user", func(ctx *http.Context) {
-		ctx.Response.AddHeader("Content-Type", "application/json")
-		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
-		ctx.Response.Status(200).Send("Hello from user")
-	})
-
-	app.Post("/user", func(ctx *http.Context) {
-		ctx.Response.AddHeader("Content-Type", "application/json")
-		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
-		fmt.Println("Body:", ctx.GetBody())
-		ctx.Response.Status(200).Json(map[string]any{"body": ctx.GetBody()})
-	})
-
-	app.Put("/user", func(ctx *http.Context) {
-		ctx.Response.AddHeader("Content-Type", "application/json")
-		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
-		fmt.Println("Body:", ctx.GetBody())
-		ctx.Response.Status(200).Json(map[string]any{"body": ctx.Request.GetJsonBody()})
-	})
-
 	app.Patch("/user", func(ctx *http.Context) {
 		ctx.Response.AddHeader("Content-Type", "application/json")
 		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
@@ -153,8 +183,39 @@ func main() {
 	})
 }
 
+
+func middlewareTest1(ctx *http.Context, next func()) {
+	fmt.Println("Middleware Router Group Test 1")
+	next()
+}
+
+func middlewareTest2(ctx *http.Context, next func()) {
+	fmt.Println("Middleware Router Group Test 2")
+	next()
+}
+
 func CompanyRouter() *http.Router {
 	router := http.NewRouter()
+
+	router.Use(func(ctx *http.Context, next func()) {
+		fmt.Println("Middleware  Router Global 1")
+		next()
+	})
+
+	// // use groups to add
+	router.Group("/test", []http.Middleware{middlewareTest1, middlewareTest2}, func(r *http.Router) {
+		r.Get("/", func(ctx *http.Context) {
+			ctx.Response.AddHeader("Content-Type", "application/json")
+			ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
+			ctx.Response.Status(200).Json(map[string]any{"message": "Hello from test group!"})
+		})
+
+		r.Get("/info", func(ctx *http.Context) {
+			ctx.Response.AddHeader("Content-Type", "application/json")
+			ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
+			ctx.Response.Status(200).Json(map[string]any{"info": "Test group information."})
+		})
+	})
 
 	router.Get("/", func(ctx *http.Context) {
 		ctx.Response.AddHeader("Content-Type", "application/json")
@@ -166,6 +227,11 @@ func CompanyRouter() *http.Router {
 		ctx.Response.AddHeader("Content-Type", "application/json")
 		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
 		ctx.Response.Status(200).Json(map[string]any{"info": "Company information goes here."})
+	})
+
+	router.Use(func(ctx *http.Context, next func()) {
+		fmt.Println("Middleware  Router Global 2")
+		next()
 	})
 
 	router.Post("/create", func(ctx *http.Context) {

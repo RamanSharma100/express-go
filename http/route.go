@@ -73,6 +73,35 @@ func (s *Server) AddRoute(path string, handler Handler, method []string) {
 	}
 }
 
+func (s *Server) addRouteWithMiddleware(path string, handler Handler, method []string, middlewares ...Middleware) {
+	if s.ValidateRoute(path, handler) {
+		for _, m := range method {
+			if _, ok := s.Routes[m]; !ok {
+				s.Routes[m] = []Route{}
+			}
+
+			Params := []string{}
+
+			fmt.Printf("🚀 %s Route loaded\n", path)
+
+			if isParameterizedRoute(path) {
+				path, Params = s.getParameterizedRoute(path)
+			}
+
+			allMiddlewares := s.Middlewares
+
+			s.Routes[m] = append(s.Routes[m], Route{
+				Method:      method,
+				Path:        path,
+				Handler:     handler,
+				Params:      Params,
+				Middlewares: append(allMiddlewares, middlewares...),
+			})
+			s.Routes[m] = sortRoutesWithParamsLast(s.Routes[m])
+		}
+	}
+}
+
 func (s *Server) AddRouteWithRouter(path string, router *Router) {
 	if router == nil {
 		return
@@ -104,7 +133,7 @@ func (s *Server) AddRouteWithRouter(path string, router *Router) {
 					Path:        path,
 					Handler:     route.Handler,
 					Params:      Params,
-					Middlewares: append(middlewares, route.Middlewares...),
+					Middlewares: append(middlewares, router.middlewares...),
 				})
 				s.Routes[m] = sortRoutesWithParamsLast(s.Routes[m])
 			}
@@ -165,7 +194,6 @@ func (s *Server) UseRouter(path string, router *Router) {
 			route.Path = "/" + route.Path
 		}
 		fullPath := path + route.Path
-
-		s.AddRoute(fullPath, route.Handler, route.Method)
+		s.addRouteWithMiddleware(fullPath, route.Handler, route.Method, route.Middlewares...)
 	}
 }

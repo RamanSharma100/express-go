@@ -1,6 +1,8 @@
 package http
 
-import "strings"
+import (
+	"strings"
+)
 
 type Router struct {
 	routes      []Route
@@ -105,7 +107,7 @@ func (r *Router) UseRouter(path string, router *Router) {
 			route.Path = "/" + route.Path
 		}
 		fullPath := path + route.Path
-		r.AddRoute(fullPath, route.Handler, route.Method)
+		r.addRouteWithMiddleware(fullPath, route.Handler, route.Method, route.Middlewares...)
 	}
 }
 
@@ -117,13 +119,35 @@ func (r *Router) Use(middlewares ...Middleware) {
 }
 
 func (r *Router) Group(prefix string, middlewares []Middleware, handler func(router *Router)) {
-	router := &Router{
-		routes: []Route{},
+	newRouter := &Router{
+		routes:      []Route{},
+		middlewares: middlewares,
 	}
 
-	r.Use(middlewares...)
+	handler(newRouter)
 
-	handler(router)
+	r.UseRouter(prefix, newRouter)
+}
 
-	r.UseRouter(prefix, router)
+func (r *Router) addRouteWithMiddleware(path string, handler Handler, method []string, middlewares ...Middleware) {
+	if r.ValidateRoute(path, handler) {
+
+		if len(method) == 0 {
+			method = []string{"GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS", "HEAD"}
+		}
+
+		params := []string{}
+
+		if isParameterizedRoute(path) {
+			path, params = r.getParameterizedRoute(path)
+		}
+
+		r.routes = append(r.routes, Route{
+			Method:      method,
+			Path:        path,
+			Handler:     handler,
+			Params:      params,
+			Middlewares: append(append([]Middleware{}, r.middlewares...), middlewares...),
+		})
+	}
 }
