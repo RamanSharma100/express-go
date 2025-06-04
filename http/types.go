@@ -38,7 +38,7 @@ type Server struct {
 	Middlewares  []Middleware
 }
 
-type HTTPMethod func(path string, handler Handler)
+type HTTPMethod func(path string, handler Handler) *RouteChain
 
 type Route struct {
 	Method      []string
@@ -46,4 +46,12 @@ type Route struct {
 	Handler     Handler
 	Params      []string
 	Middlewares []Middleware
+	Name        string
+}
+
+type RouteChain struct {
+	server *Server
+	router *Router
+	path   string
+	method []string
 }

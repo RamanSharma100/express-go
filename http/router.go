@@ -61,32 +61,67 @@ func (r *Router) AddRoute(path string, handler Handler, method []string) {
 	}
 }
 
-func (r *Router) Get(path string, handler Handler) {
+func (r *Router) Get(path string, handler Handler) *RouteChain {
 	r.AddRoute(path, handler, []string{"GET"})
+	return &RouteChain{
+		router: r,
+		path:   path,
+		method: []string{"GET"},
+	}
 }
 
-func (r *Router) Post(path string, handler Handler) {
+func (r *Router) Post(path string, handler Handler) *RouteChain {
 	r.AddRoute(path, handler, []string{"POST"})
+	return &RouteChain{
+		router: r,
+		path:   path,
+		method: []string{"POST"},
+	}
 }
 
-func (r *Router) Put(path string, handler Handler) {
+func (r *Router) Put(path string, handler Handler) *RouteChain {
 	r.AddRoute(path, handler, []string{"PUT"})
+	return &RouteChain{
+		router: r,
+		path:   path,
+		method: []string{"PUT"},
+	}
 }
 
-func (r *Router) Delete(path string, handler Handler) {
+func (r *Router) Delete(path string, handler Handler) *RouteChain {
 	r.AddRoute(path, handler, []string{"DELETE"})
+	return &RouteChain{
+		router: r,
+		path:   path,
+		method: []string{"DELETE"},
+	}
 }
 
-func (r *Router) Patch(path string, handler Handler) {
+func (r *Router) Patch(path string, handler Handler) *RouteChain {
 	r.AddRoute(path, handler, []string{"PATCH"})
+	return &RouteChain{
+		router: r,
+		path:   path,
+		method: []string{"PATCH"},
+	}
 }
 
-func (r *Router) Options(path string, handler Handler) {
+func (r *Router) Options(path string, handler Handler) *RouteChain {
 	r.AddRoute(path, handler, []string{"OPTIONS"})
+	return &RouteChain{
+		router: r,
+		path:   path,
+		method: []string{"OPTIONS"},
+	}
 }
 
-func (r *Router) Head(path string, handler Handler) {
+func (r *Router) Head(path string, handler Handler) *RouteChain {
 	r.AddRoute(path, handler, []string{"HEAD"})
+	return &RouteChain{
+		router: r,
+		path:   path,
+		method: []string{"HEAD"},
+	}
 }
 
 func (r *Router) Add(path string, handler Handler) {

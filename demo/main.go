@@ -47,7 +47,7 @@ func main() {
 		ctx.Render("index.html", map[string]any{
 			"user": ctx.Request.AdditionalFields["user"],
 		})
-	})
+	}).Name("home")
 
 	app.Use(func(ctx *http.Context, next func()) {
 		fmt.Println("Middleware Global 2")
@@ -85,7 +85,7 @@ func main() {
 				"params": params,
 			},
 		)
-	})
+	}).Name("getById")
 
 	app.UseRouter("/company", routes.CompanyRouter())
 

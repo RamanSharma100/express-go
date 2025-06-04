@@ -2,6 +2,7 @@ package http
 
 import (
 	"fmt"
+	"regexp"
 	"strings"
 )
 
@@ -141,32 +142,73 @@ func (s *Server) AddRouteWithRouter(path string, router *Router) {
 	}
 }
 
-func (s *Server) Get(path string, handler Handler) {
+func (s *Server) Get(path string, handler Handler) *RouteChain {
 	s.AddRoute(path, handler, []string{"GET"})
+	return &RouteChain{
+		server: s,
+		path:   path,
+		method: []string{"GET"},
+	}
+
 }
 
-func (s *Server) Post(path string, handler Handler) {
+func (s *Server) Post(path string, handler Handler) *RouteChain {
 	s.AddRoute(path, handler, []string{"POST"})
+	return &RouteChain{
+		server: s,
+		path:   path,
+		method: []string{"POST"},
+	}
+
 }
 
-func (s *Server) Put(path string, handler Handler) {
+func (s *Server) Put(path string, handler Handler) *RouteChain {
 	s.AddRoute(path, handler, []string{"PUT"})
+	return &RouteChain{
+		server: s,
+		path:   path,
+		method: []string{"PUT"},
+	}
+
 }
 
-func (s *Server) Delete(path string, handler Handler) {
+func (s *Server) Delete(path string, handler Handler) *RouteChain {
 	s.AddRoute(path, handler, []string{"DELETE"})
+	return &RouteChain{
+		server: s,
+		path:   path,
+		method: []string{"DELETE"},
+	}
+
 }
 
-func (s *Server) Patch(path string, handler Handler) {
+func (s *Server) Patch(path string, handler Handler) *RouteChain {
 	s.AddRoute(path, handler, []string{"PATCH"})
+	return &RouteChain{
+		server: s,
+		path:   path,
+		method: []string{"PATCH"},
+	}
+
 }
 
-func (s *Server) Options(path string, handler Handler) {
+func (s *Server) Options(path string, handler Handler) *RouteChain {
 	s.AddRoute(path, handler, []string{"OPTIONS"})
+	return &RouteChain{
+		server: s,
+		path:   path,
+		method: []string{"OPTIONS"},
+	}
+
 }
 
-func (s *Server) Head(path string, handler Handler) {
+func (s *Server) Head(path string, handler Handler) *RouteChain {
 	s.AddRoute(path, handler, []string{"HEAD"})
+	return &RouteChain{
+		server: s,
+		path:   path,
+		method: []string{"GET"},
+	}
 }
 
 func (s *Server) Add(path string, handler Handler) {
@@ -196,4 +238,33 @@ func (s *Server) UseRouter(path string, router *Router) {
 		fullPath := path + route.Path
 		s.addRouteWithMiddleware(fullPath, route.Handler, route.Method, route.Middlewares...)
 	}
+}
+
+func (rc *RouteChain) Name(name string) {
+	if name == "" {
+		panic("Route name cannot be empty")
+	}
+
+	if rc.router != nil {
+		for i, route := range rc.router.routes {
+			if route.Path == rc.path && fmt.Sprintf("%v", route.Method) == fmt.Sprintf("%v", rc.method) {
+				rc.router.routes[i].Name = name
+			}
+		}
+		return
+	}
+
+	for _, m := range rc.method {
+		routes := rc.server.Routes[m]
+		for i := range routes {
+			routePattern := "^" + strings.ReplaceAll(routes[i].Path, "{", "(?P<") // convert {param} to regex group
+			routePattern = strings.ReplaceAll(routePattern, "}", ">[^/]+)") + "$"
+			matched, _ := regexp.MatchString(routePattern, rc.path)
+			if (routes[i].Path == rc.path || matched) && fmt.Sprintf("%v", routes[i].Method) == fmt.Sprintf("%v", rc.method) {
+				routes[i].Name = name
+				rc.server.Routes[m][i].Name = name
+			}
+		}
+	}
+
 }

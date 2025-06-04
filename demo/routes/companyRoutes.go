@@ -43,7 +43,7 @@ func CompanyRouter() *http.Router {
 		ctx.Response.AddHeader("Content-Type", "application/json")
 		ctx.Response.AddHeader("X-Custom-Header", "CustomValue")
 		ctx.Response.Status(200).Json(map[string]any{"message": "Welcome to the company!"})
-	})
+	}).Name("companyHome")
 
 	router.Get("/info", func(ctx *http.Context) {
 		ctx.Response.AddHeader("Content-Type", "application/json")
