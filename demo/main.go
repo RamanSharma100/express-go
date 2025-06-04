@@ -28,7 +28,7 @@ func main() {
 
 	// add cors middleware
 	app.Use(http.CORS(&http.CorsOptions{
-		AllowOrigin: "http://localhost:8000,http://localhost:8080",
+		AllowOrigin: "*",
 	}))
 
 	// Set a custom error handler
@@ -42,6 +42,7 @@ func main() {
 
 	app.Get("/", func(ctx *http.Context) {
 		ctx.Request.AddField("user", "Raman Sharma")
+		http.Logger().Info("Request received for / endpoint")
 		// ctx.Response.Send("Hello, World!" + ctx.Request.AdditionalFields["user"].(string))
 		ctx.Render("index.html", map[string]any{
 			"user": ctx.Request.AdditionalFields["user"],

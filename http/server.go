@@ -58,6 +58,12 @@ func CreateServer() *Server {
 		Response: &Response{
 			Headers: make(map[string]string),
 		},
+		Middlewares: []Middleware{
+			Logs(&LogOptions{
+				Enable: true,
+				Format: "{{.Method}} {{.Path}} - {{.StatusCode}}",
+			}),
+		},
 	}
 }
 

@@ -34,13 +34,13 @@ A simple and lightweight MVC Web framework for Go, inspired by Node.js Express a
 - Embedding Middleware in Route groups
 - Custom Error handling [Panic handling]
 - CORS support
+- Request logging
 
 ## Upcoming Features
 
 This is lot of work in progress and will be updated frequently. Some of the upcoming features include:
 
 - Custom Template Engine Support
-- Request logging
 - Route naming
 - Support for query parameters
 - Support for cookies
@@ -108,7 +108,7 @@ func main() {
 
 	// add cors middleware
 	app.Use(http.CORS(&http.CorsOptions{
-		AllowOrigin: "http://localhost:8000,http://localhost:8080",
+		AllowOrigin: "*,"
 	}))
 
 	// Set a custom error handler
@@ -123,6 +123,7 @@ func main() {
 
 	app.Get("/", func(ctx *http.Context) {
 		ctx.Request.AddField("user", "Raman Sharma")
+		http.Logger().Info("Request received for / endpoint")
 		// ctx.Response.Send("Hello, World!" + ctx.Request.AdditionalFields["user"].(string))
 		ctx.Render("index.html", map[string]any{
 			"user": ctx.Request.AdditionalFields["user"],

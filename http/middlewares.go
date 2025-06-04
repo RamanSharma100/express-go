@@ -1,7 +1,9 @@
 package http
 
 import (
+	"fmt"
 	"net/http"
+	"strconv"
 	"strings"
 )
 
@@ -10,6 +12,11 @@ type CorsOptions struct {
 	AllowMethods string
 	AllowHeaders string
 	ContentType  string
+}
+
+type LogOptions struct {
+	Enable bool
+	Format string
 }
 
 func CORS(options *CorsOptions) Middleware {
@@ -48,6 +55,7 @@ func CORS(options *CorsOptions) Middleware {
 			}
 			if !originAllowed {
 				ctx.Response.Writer.WriteHeader(http.StatusForbidden)
+				ctx.Response.Status(http.StatusForbidden)
 				ctx.Response.Writer.Write([]byte("CORS policy does not allow access from this origin"))
 				return
 			}
@@ -63,5 +71,31 @@ func CORS(options *CorsOptions) Middleware {
 		}
 
 		next()
+	}
+}
+
+func Logs(options *LogOptions) Middleware {
+	return func(ctx *Context, next func()) {
+		next()
+		if options != nil && options.Enable {
+			format := options.Format
+			if format == "" {
+				format = "{{.Method}} {{.Path}} - {{.StatusCode}}"
+			}
+
+			logData := map[string]any{
+				"Method":     ctx.Request.Method,
+				"Path":       ctx.Request.r.URL.Path,
+				"StatusCode": strconv.Itoa(ctx.Response.StatusCode),
+			}
+
+			logMessage := format
+			for key, value := range logData {
+				logMessage = strings.ReplaceAll(logMessage, "{{."+key+"}}", value.(string))
+			}
+
+			fmt.Println(logMessage)
+		}
+
 	}
 }
