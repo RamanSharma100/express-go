@@ -41,12 +41,13 @@ type Server struct {
 type HTTPMethod func(path string, handler Handler) *RouteChain
 
 type Route struct {
-	Method      []string
-	Path        string
-	Handler     Handler
-	Params      []string
-	Middlewares []Middleware
-	Name        string
+	Method       []string
+	Path         string
+	Handler      Handler
+	Params       []string
+	SearchParams map[string]string
+	Middlewares  []Middleware
+	Name         string
 }
 
 type RouteChain struct {

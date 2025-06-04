@@ -82,7 +82,8 @@ func main() {
 		params := ctx.GetParams()
 		ctx.Response.Json(
 			map[string]any{
-				"params": params,
+				"params":     params,
+				"queryPrams": ctx.GetSearchParams(),
 			},
 		)
 	}).Name("getById")

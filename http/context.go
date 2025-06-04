@@ -119,3 +119,27 @@ func (ctx *Context) Render(tmpl string, data any) {
 		return
 	}
 }
+
+func (ctx *Context) Redirect(url string) {
+	ctx.Response.Writer.Header().Set("Location", url)
+	ctx.Response.Writer.WriteHeader(http.StatusFound)
+}
+
+func (ctx *Context) GetSearchParams() map[string]string {
+	params := make(map[string]string)
+	query := ctx.Request.r.URL.Query()
+	for key, values := range query {
+		if len(values) > 0 {
+			params[key] = values[0]
+		}
+	}
+	return params
+}
+
+func (ctx *Context) GetSearchParam(name string) string {
+	query := ctx.Request.r.URL.Query()
+	if values, ok := query[name]; ok && len(values) > 0 {
+		return values[0]
+	}
+	return ""
+}

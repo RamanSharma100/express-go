@@ -6,49 +6,8 @@ import (
 	"strings"
 )
 
-func (s *Server) ValidateRoute(path string, handler Handler) bool {
-	if path == "" {
-		panic("Path cannot be empty")
-	}
-	if handler == nil {
-		panic("Handler cannot be empty")
-	}
-
-	return true
-
-}
-
-func (s *Server) getParameterizedRoute(path string) (string, []string) {
-	Params := []string{}
-	parts := strings.Split(path, "/")
-	for i, part := range parts {
-		if strings.HasPrefix(part, ":") {
-			paramName := strings.TrimPrefix(part, ":")
-			Params = append(Params, paramName)
-			parts[i] = "{" + paramName + "}"
-		}
-	}
-
-	return strings.Join(parts, "/"), Params
-}
-
-func isParameterizedRoute(path string) bool {
-	return strings.ContainsAny(path, ":")
-}
-
-func sortRoutesWithParamsLast(routes []Route) []Route {
-	for i := 0; i < len(routes); i++ {
-		for j := i + 1; j < len(routes); j++ {
-			if len(routes[i].Params) > 0 && len(routes[j].Params) == 0 {
-				routes[i], routes[j] = routes[j], routes[i]
-			}
-		}
-	}
-	return routes
-}
-
 func (s *Server) AddRoute(path string, handler Handler, method []string) {
-	if s.ValidateRoute(path, handler) {
+	if validateRoute(path, handler) {
 		for _, m := range method {
 			if _, ok := s.Routes[m]; !ok {
 				s.Routes[m] = []Route{}
@@ -59,15 +18,19 @@ func (s *Server) AddRoute(path string, handler Handler, method []string) {
 			fmt.Printf("🚀 %s Route loaded\n", path)
 
 			if isParameterizedRoute(path) {
-				path, Params = s.getParameterizedRoute(path)
+				path, Params = getParameterizedRoute(path)
 			}
 
+			searchParams := getSearchParams(path)
+			path = removeQueryParams(path)
+
 			s.Routes[m] = append(s.Routes[m], Route{
-				Method:      method,
-				Path:        path,
-				Handler:     handler,
-				Params:      Params,
-				Middlewares: append([]Middleware{}, s.Middlewares...),
+				Method:       method,
+				Path:         path,
+				Handler:      handler,
+				Params:       Params,
+				SearchParams: searchParams,
+				Middlewares:  append([]Middleware{}, s.Middlewares...),
 			})
 			s.Routes[m] = sortRoutesWithParamsLast(s.Routes[m])
 		}
@@ -75,7 +38,7 @@ func (s *Server) AddRoute(path string, handler Handler, method []string) {
 }
 
 func (s *Server) addRouteWithMiddleware(path string, handler Handler, method []string, middlewares ...Middleware) {
-	if s.ValidateRoute(path, handler) {
+	if validateRoute(path, handler) {
 		for _, m := range method {
 			if _, ok := s.Routes[m]; !ok {
 				s.Routes[m] = []Route{}
@@ -86,17 +49,21 @@ func (s *Server) addRouteWithMiddleware(path string, handler Handler, method []s
 			fmt.Printf("🚀 %s Route loaded\n", path)
 
 			if isParameterizedRoute(path) {
-				path, Params = s.getParameterizedRoute(path)
+				path, Params = getParameterizedRoute(path)
 			}
+
+			searchParams := getSearchParams(path)
+			path = removeQueryParams(path)
 
 			allMiddlewares := s.Middlewares
 
 			s.Routes[m] = append(s.Routes[m], Route{
-				Method:      method,
-				Path:        path,
-				Handler:     handler,
-				Params:      Params,
-				Middlewares: append(allMiddlewares, middlewares...),
+				Method:       method,
+				Path:         path,
+				Handler:      handler,
+				Params:       Params,
+				SearchParams: searchParams,
+				Middlewares:  append(allMiddlewares, middlewares...),
 			})
 			s.Routes[m] = sortRoutesWithParamsLast(s.Routes[m])
 		}
@@ -113,7 +80,7 @@ func (s *Server) AddRouteWithRouter(path string, router *Router) {
 	}
 
 	for _, route := range router.routes {
-		if s.ValidateRoute(path, route.Handler) {
+		if validateRoute(path, route.Handler) {
 			for _, m := range route.Method {
 				if _, ok := s.Routes[m]; !ok {
 					s.Routes[m] = []Route{}
@@ -124,17 +91,21 @@ func (s *Server) AddRouteWithRouter(path string, router *Router) {
 				fmt.Printf("🚀 %s Route loaded\n", path)
 
 				if isParameterizedRoute(path) {
-					path, Params = s.getParameterizedRoute(path)
+					path, Params = getParameterizedRoute(path)
 				}
+
+				searchParams := getSearchParams(path)
+				path = removeQueryParams(path)
 
 				middlewares := s.Middlewares
 
 				s.Routes[m] = append(s.Routes[m], Route{
-					Method:      route.Method,
-					Path:        path,
-					Handler:     route.Handler,
-					Params:      Params,
-					Middlewares: append(middlewares, router.middlewares...),
+					Method:       route.Method,
+					Path:         path,
+					Handler:      route.Handler,
+					Params:       Params,
+					SearchParams: searchParams,
+					Middlewares:  append(middlewares, router.middlewares...),
 				})
 				s.Routes[m] = sortRoutesWithParamsLast(s.Routes[m])
 			}

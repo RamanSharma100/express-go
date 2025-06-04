@@ -36,14 +36,14 @@ A simple and lightweight MVC Web framework for Go, inspired by Node.js Express a
 - CORS support
 - Request logging
 - Route naming
-- Query Params support
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
 
 ## Upcoming Features
 
 This is lot of work in progress and will be updated frequently. Some of the upcoming features include:
 
 - Custom Template Engine Support
-- Support for query parameters
 - Support for cookies
 - Static file serving
 - Session management
@@ -164,7 +164,8 @@ func main() {
 		params := ctx.GetParams()
 		ctx.Response.Json(
 			map[string]any{
-				"params": params,
+				"params":     params,
+				"queryPrams": ctx.GetSearchParams(),
 			},
 		)
 	}).Name("getById")
@@ -335,6 +336,9 @@ func CompanyRouter() *http.Router {
 - `app.Options(path string, handler Handler)`
 - `app.Listen(port int, callback func(int, error))`
 - `app.UseRouter(path string, router *Router)` - Use a router for a specific path
+- `app.Use(middleware Middleware)` - Add global middleware
+- `app.Group(path string, middlewares []Middleware, handler func(*Router))` - Group routes with middleware
+- `app.SetErrorHandler(handler func(*Context, error))` - Set a custom error handler
 
 ### HTTP
 
@@ -343,12 +347,18 @@ func CompanyRouter() *http.Router {
 - `http.Context` - Context for request and response handling
 - `http.Handler` - Type for request handlers
 - `http.Router` - Router for handling routes
+- `http.CORS(options *CorsOptions)` - Middleware for handling CORS
+- `http.Logger()` - Get the global logger instance
 
 ### Context
 
 - `ctx.GetParams()` - Get URL parameters as a map
 - `ctx.GetBody()` - Get the request body as a string
 - `ctx.GetJsonBody()` - Get the request body parsed as JSON
+- `ctx.GetSearchParams()` - Get query parameters as a map
+- `ctx.GetSearchParam(key string)` - Get a specific query parameter by key
+- `ctx.Redirect(url string)` - Redirect to a different URL
+- `ctx.Render(template string, data map[string]any)` - Render an HTML template with data
 - `ctx.Request` - Access the request object
 - `ctx.Response` - Access the response object
 - `ctx.Response.Status(code int)` - Set the response status code
@@ -370,6 +380,8 @@ func CompanyRouter() *http.Router {
 - `router.Patch(path string, handler Handler)`
 - `router.Delete(path string, handler Handler)`
 - `router.Options(path string, handler Handler)`
+- `router.Use(middleware Middleware)` - Add middleware to the router
+- `router.Group(path string, middlewares []Middleware, handler func(*Router))` - Group routes with middleware
 
 ### Handler
 
@@ -391,6 +403,11 @@ func(ctx *http.Context) {
 - `ctx.Request.AddField(key, value string)` - Add custom field to `request.AdditionalFields`
 - `ctx.Request.ParseBody()` - Parse request body (for POST)
 - `ctx.Request.r` - Get the underlying `http.Request`
+- `ctx.Request.GetJsonBody()` - Get the request body parsed as JSON
+- `ctx.Request.GetParams()` - Get URL parameters as a map
+- `ctx.Request.GetSearchParams()` - Get query parameters as a map
+- `ctx.Request.GetSearchParam(key string)` - Get a specific query parameter by key
+- `ctx.Request.AdditionalFields` - Map for additional fields added by middleware or handlers
 
 ### Response
 
@@ -399,6 +416,39 @@ func(ctx *http.Context) {
 - `ctx.Response.Status(code int)` - Set status code
 - `ctx.Response.AddHeader(key, value string)` - Add custom header
 - `ctx.Response.Writer` - Get the underlying `http.ResponseWriter`
+
+### Route Chaining
+
+You can chain multiple handlers for a route:
+note:- For now only `Name` is supported for chaining, more work needed to support other features like `Middleware`, `Group`, etc.
+
+```go
+app.Get("/example", func(ctx *http.Context) {
+	ctx.Response.Send("First handler")
+}).Name("example")
+```
+
+### Logging
+
+You can use the global logger instance to log messages:
+
+```go
+http.Logger().Info("This is an info message")
+http.Logger().Error("This is an error message")
+http.Logger().Debug("This is a debug message")
+```
+
+### CORS
+
+CORS middleware is included to handle cross-origin requests. You can configure it with options:
+
+```go
+app.Use(http.CORS(&http.CorsOptions{
+	AllowOrigin: "*",
+	AllowMethods: "GET, POST, PUT, DELETE, OPTIONS",
+	AllowHeaders: "Content-Type, Authorization",
+	ContentType: "application/json",
+}))
 
 ## Contributing
 
@@ -409,3 +459,4 @@ Feel free to open issues for suggestions, bugs, or questions.
 ## License
 
 This project is licensed under the terms of the [MIT License](LICENSE).
+```
