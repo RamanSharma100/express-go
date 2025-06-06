@@ -2,8 +2,6 @@ package http
 
 import (
 	"fmt"
-	"regexp"
-	"strings"
 )
 
 func (s *Server) AddRoute(path string, handler Handler, method []string) {
@@ -15,11 +13,11 @@ func (s *Server) AddRoute(path string, handler Handler, method []string) {
 
 			Params := []string{}
 
-			fmt.Printf("🚀 %s Route loaded\n", path)
-
 			if isParameterizedRoute(path) {
 				path, Params = getParameterizedRoute(path)
 			}
+
+			fmt.Printf("🚀 [%s] %s Route loaded\n", m, path)
 
 			searchParams := getSearchParams(path)
 			path = removeQueryParams(path)
@@ -46,7 +44,7 @@ func (s *Server) addRouteWithMiddleware(path string, handler Handler, method []s
 
 			Params := []string{}
 
-			fmt.Printf("🚀 %s Route loaded\n", path)
+			fmt.Printf("🚀 [%s] %s Route loaded\n", m, path)
 
 			if isParameterizedRoute(path) {
 				path, Params = getParameterizedRoute(path)
@@ -88,7 +86,7 @@ func (s *Server) AddRouteWithRouter(path string, router *Router) {
 
 				Params := []string{}
 
-				fmt.Printf("🚀 %s Route loaded\n", path)
+				fmt.Printf("🚀 [%s] %s Route loaded\n", m, path)
 
 				if isParameterizedRoute(path) {
 					path, Params = getParameterizedRoute(path)
@@ -209,33 +207,4 @@ func (s *Server) UseRouter(path string, router *Router) {
 		fullPath := path + route.Path
 		s.addRouteWithMiddleware(fullPath, route.Handler, route.Method, route.Middlewares...)
 	}
-}
-
-func (rc *RouteChain) Name(name string) {
-	if name == "" {
-		panic("Route name cannot be empty")
-	}
-
-	if rc.router != nil {
-		for i, route := range rc.router.routes {
-			if route.Path == rc.path && fmt.Sprintf("%v", route.Method) == fmt.Sprintf("%v", rc.method) {
-				rc.router.routes[i].Name = name
-			}
-		}
-		return
-	}
-
-	for _, m := range rc.method {
-		routes := rc.server.Routes[m]
-		for i := range routes {
-			routePattern := "^" + strings.ReplaceAll(routes[i].Path, "{", "(?P<") // convert {param} to regex group
-			routePattern = strings.ReplaceAll(routePattern, "}", ">[^/]+)") + "$"
-			matched, _ := regexp.MatchString(routePattern, rc.path)
-			if (routes[i].Path == rc.path || matched) && fmt.Sprintf("%v", routes[i].Method) == fmt.Sprintf("%v", rc.method) {
-				routes[i].Name = name
-				rc.server.Routes[m][i].Name = name
-			}
-		}
-	}
-
 }

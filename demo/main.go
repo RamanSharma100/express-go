@@ -21,6 +21,8 @@ func middlewareTest2(ctx *http.Context, next func()) {
 func main() {
 	app := http.New()
 
+	app.Static("/static", "/demo/static")
+
 	app.Use(func(ctx *http.Context, next func()) {
 		fmt.Println("Middleware Global 1")
 		next()

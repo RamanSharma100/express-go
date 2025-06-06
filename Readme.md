@@ -38,6 +38,7 @@ A simple and lightweight MVC Web framework for Go, inspired by Node.js Express a
 - Route naming
 - Support for query parameters
 - Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving
 
 ## Upcoming Features
 
@@ -45,7 +46,6 @@ This is lot of work in progress and will be updated frequently. Some of the upco
 
 - Custom Template Engine Support
 - Support for cookies
-- Static file serving
 - Session management
 - Rate limiting
 - File uploads [multer like]

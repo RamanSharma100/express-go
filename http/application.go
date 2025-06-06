@@ -8,6 +8,7 @@ type Application struct {
 	Patch           HTTPMethod
 	Delete          HTTPMethod
 	Options         HTTPMethod
+	Static          func(prefix string, dir string)
 	Use             func(middlewares ...Middleware)
 	UseRouter       func(prefix string, router *Router)
 	SetErrorHandler func(handler ErrorHandlerType)
@@ -23,6 +24,7 @@ func New() *Application {
 		Patch:           server.Patch,
 		Delete:          server.Delete,
 		Options:         server.Options,
+		Static:          server.Static,
 		Use:             server.Use,
 		UseRouter:       server.UseRouter,
 		SetErrorHandler: server.SetErrorHandler,
