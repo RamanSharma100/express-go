@@ -1,4 +1,4 @@
-# express-go [Work in Progress]
+# express-go
 
 [![GitHub](https://img.shields.io/github/license/ramansharma100/express-go)](LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/ramansharma100/express-go)](https://github.com/ramansharma100/express-go/issues)
