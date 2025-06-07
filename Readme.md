@@ -5,7 +5,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/ramansharma100/express-go)](https://goreportcard.com/report/github.com/ramansharma100/express-go)
 [![GoDoc](https://pkg.go.dev/badge/github.com/ramansharma100/express-go)](https://pkg.go.dev/github.com/ramansharma100/express-go)
 
-A simple and lightweight MVC Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+A simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
 
 > - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
 > - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
