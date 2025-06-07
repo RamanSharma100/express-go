@@ -1,5 +1,9 @@
 package http
 
+import (
+	"net/url"
+)
+
 type LoggerType interface {
 	Log(message string)
 	Debug(message string)
@@ -146,4 +150,30 @@ func (l logger) WithField(key string, value any) LoggerType {
 
 func (l logger) WithError(err error) LoggerType {
 	return l.WithField("error", err)
+}
+
+func (ctx *Context) EncodeURL(urls ...string) string {
+	encodedURL := ""
+	for _, u := range urls {
+		if encodedURL != "" {
+			encodedURL += "/"
+		}
+		encodedURL += url.QueryEscape(u)
+	}
+	return encodedURL
+}
+
+func (ctx *Context) DecodeURL(encodedURLs ...string) (string, error) {
+	decodedURL := ""
+	for _, encodedURL := range encodedURLs {
+		if decodedURL != "" {
+			decodedURL += "/"
+		}
+		decoded, err := url.QueryUnescape(encodedURL)
+		if err != nil {
+			return "", err
+		}
+		decodedURL += decoded
+	}
+	return decodedURL, nil
 }

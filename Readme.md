@@ -40,6 +40,7 @@ A simple and lightweight MVC Web framework for Go, inspired by Node.js Express a
 - Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
 - Static file serving [need improvements]
 - Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
 
 ## Upcoming Features
 
@@ -49,7 +50,6 @@ This is lot of work in progress and will be updated frequently. Some of the upco
 - Support for cookies
 - Session management
 - File uploads [multer like]
-- URL encoding/decoding
 - WebSocket support
 - Support for mixins
 - Support for plugins
@@ -380,6 +380,8 @@ func CompanyRouter() *http.Router {
 - `ctx.Request.ParseBody()` - Parse the request body (for POST requests)
 - `ctx.Request.Method` - Get the HTTP method of the request
 - `ctx.Request.Url` - Get the URL string of the request
+- `ctx.EncodeURL(urls ...string) string` - Encode URLs for safe transmission
+- `ctx.DecodeURL(url string) string` - Decode URLs from their encoded form
 
 ### Router
 
