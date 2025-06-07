@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"strconv"
 	"strings"
+	"sync"
 )
 
 type CorsOptions struct {
@@ -18,6 +19,15 @@ type LogOptions struct {
 	Enable bool
 	Format string
 }
+
+type RateLimitOptions struct {
+	Limit     int
+	Window    int
+	Remaining int
+}
+
+var rateLimitStore = make(map[string]int)
+var rateLimitMutex sync.Mutex
 
 func CORS(options *CorsOptions) Middleware {
 	return func(ctx *Context, next func()) {
@@ -97,5 +107,37 @@ func Logs(options *LogOptions) Middleware {
 			fmt.Println(logMessage)
 		}
 
+	}
+}
+
+func RateLimit(options *RateLimitOptions) Middleware {
+	return func(ctx *Context, next func()) {
+		if options == nil || options.Limit <= 0 || options.Window <= 0 {
+			next()
+			return
+		}
+
+		//TODO: Implement redis for production
+		clientIP := ctx.Request.r.RemoteAddr
+
+		rateLimitMutex.Lock()
+		count := rateLimitStore[clientIP]
+		if count >= options.Limit {
+			options.Remaining = 0
+		} else {
+			options.Remaining = options.Limit - count
+			rateLimitStore[clientIP] = count + 1
+		}
+		rateLimitMutex.Unlock()
+
+		if options.Remaining <= 0 {
+			ctx.Response.Writer.WriteHeader(http.StatusTooManyRequests)
+			ctx.Response.Status(http.StatusTooManyRequests)
+			ctx.Response.Writer.Write([]byte("Rate limit exceeded"))
+			return
+		}
+
+		options.Remaining--
+		next()
 	}
 }

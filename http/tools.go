@@ -24,6 +24,8 @@ type logger struct {
 	fields  map[string]any
 }
 
+// TODO: Improve logger
+
 func (l logger) Log(message string) {
 	if l.message != "" {
 		message = l.message + ": " + message

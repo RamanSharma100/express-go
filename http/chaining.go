@@ -34,3 +34,6 @@ func (rc *RouteChain) Name(name string) {
 	}
 
 }
+
+// TODO: Add More chaining options
+// TODO: Utilize Name for redirections

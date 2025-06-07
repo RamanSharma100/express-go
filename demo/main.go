@@ -28,12 +28,19 @@ func main() {
 		next()
 	})
 
-	// add cors middleware
+	// rate limiter
+	app.Use(http.RateLimit(&http.RateLimitOptions{
+		Limit:     10,
+		Window:    60, // in seconds
+		Remaining: 10,
+	}))
+
+	// cors middleware
 	app.Use(http.CORS(&http.CorsOptions{
 		AllowOrigin: "*",
 	}))
 
-	// Set a custom error handler
+	// custom error handler
 	app.SetErrorHandler(func(ctx *http.Context, err error) {
 		fmt.Println("Error Handler:", err)
 		ctx.Response.Status(500).Json(map[string]any{

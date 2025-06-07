@@ -4,6 +4,8 @@ import (
 	"fmt"
 )
 
+// TODO: Handle iterative routing parameters
+
 func (s *Server) AddRoute(path string, handler Handler, method []string) {
 	if validateRoute(path, handler) {
 		for _, m := range method {

@@ -38,7 +38,8 @@ A simple and lightweight MVC Web framework for Go, inspired by Node.js Express a
 - Route naming
 - Support for query parameters
 - Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
-- Static file serving
+- Static file serving [need improvements]
+- Rate limiting
 
 ## Upcoming Features
 
@@ -47,13 +48,13 @@ This is lot of work in progress and will be updated frequently. Some of the upco
 - Custom Template Engine Support
 - Support for cookies
 - Session management
-- Rate limiting
 - File uploads [multer like]
 - URL encoding/decoding
 - WebSocket support
 - Support for mixins
 - Support for plugins
 - Layout support
+- Support iterative routing parameters
 
 ## Upcoming Extended Features
 
@@ -107,12 +108,19 @@ func main() {
 		next()
 	})
 
-	// add cors middleware
+	// rate limiter
+	app.Use(http.RateLimit(&http.RateLimitOptions{
+		Limit:     10,
+		Window:    60, // in seconds
+		Remaining: 10,
+	}))
+
+	// cors middleware
 	app.Use(http.CORS(&http.CorsOptions{
 		AllowOrigin: "*,"
 	}))
 
-	// Set a custom error handler
+	// custom error handler
 	app.SetErrorHandler(func(ctx *http.Context, err error) {
 		fmt.Println("Error Handler:", err)
 		ctx.Response.Status(500).Json(map[string]any{

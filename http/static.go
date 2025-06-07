@@ -30,6 +30,7 @@ func (s *Server) Static(prefix string, dir string) {
 		http.StripPrefix(routePrefix+"/", http.FileServer(http.Dir(staticDir))).ServeHTTP(ctx.Response.Writer, ctx.Request.r)
 	})
 
+	// TODO: Handle file paths with parameters
 	s.Get(routePrefix+"/:filepath", func(ctx *Context) {
 		filePath := ctx.GetParam("filepath")
 		fmt.Println("Requested file path:", filePath)
