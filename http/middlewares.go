@@ -141,3 +141,15 @@ func RateLimit(options *RateLimitOptions) Middleware {
 		next()
 	}
 }
+
+func uploadFiles(uploadDir string) Middleware {
+	return func(ctx *Context, next func()) {
+		if ctx.Request.r.Method == "POST" || ctx.Request.r.Method == "PUT" || ctx.Request.r.Method == "PATCH" {
+			contentType := ctx.Request.r.Header.Get("Content-Type")
+			if len(contentType) > 0 && contentType[:19] == "multipart/form-data" {
+				_, _ = ctx.saveUploadedFiles(uploadDir)
+			}
+		}
+		next()
+	}
+}

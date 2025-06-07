@@ -63,6 +63,7 @@ func CreateServer() *Server {
 				Enable: true,
 				Format: "{{.Method}} {{.Path}} - {{.StatusCode}}",
 			}),
+			uploadFiles("uploads"),
 		},
 	}
 }

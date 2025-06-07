@@ -67,6 +67,16 @@ func main() {
 		panic("This is a test error")
 	})
 
+	// Now define your routes
+	app.Post("/upload", func(ctx *http.Context) {
+		files, err := ctx.GetUploadedFiles()
+		if err != nil {
+			ctx.Response.Status(400).Json(map[string]any{"error": err.Error()})
+			return
+		}
+		ctx.Response.Status(200).Json(map[string]any{"files": files})
+	})
+
 	// use groups to add
 	app.Group("/test", []http.Middleware{middlewareTest1, middlewareTest2}, func(router *http.Router) {
 		router.Get("/", func(ctx *http.Context) {

@@ -41,6 +41,7 @@ A simple and lightweight MVC Web framework for Go, inspired by Node.js Express a
 - Static file serving [need improvements]
 - Rate limiting [in memory not redis implementation - will be added while caching support]
 - URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
 
 ## Upcoming Features
 
@@ -49,7 +50,6 @@ This is lot of work in progress and will be updated frequently. Some of the upco
 - Custom Template Engine Support
 - Support for cookies
 - Session management
-- File uploads [multer like]
 - WebSocket support
 - Support for mixins
 - Support for plugins
@@ -146,6 +146,16 @@ func main() {
 
 	app.Get("/error", func(ctx *http.Context) {
 		panic("This is a test error")
+	})
+
+	// Now define your routes
+	app.Post("/upload", func(ctx *http.Context) {
+		files, err := ctx.GetUploadedFiles()
+		if err != nil {
+			ctx.Response.Status(400).Json(map[string]any{"error": err.Error()})
+			return
+		}
+		ctx.Response.Status(200).Json(map[string]any{"files": files})
 	})
 
 	// use groups to add
@@ -382,6 +392,7 @@ func CompanyRouter() *http.Router {
 - `ctx.Request.Url` - Get the URL string of the request
 - `ctx.EncodeURL(urls ...string) string` - Encode URLs for safe transmission
 - `ctx.DecodeURL(url string) string` - Decode URLs from their encoded form
+- `ctx.GetUploadedFiles()` - Get uploaded files from the request (if any)
 
 ### Router
 
@@ -493,6 +504,20 @@ You can serve static files using the `Static` middleware:
 
 ```go
 app.Static("/static", "./public") // there are improvements needed
+```
+
+### FileObject
+
+You can use the `FileObject` to handle file uploads:
+
+```go
+files, err := ctx.GetUploadedFiles()
+// [{"file1": FileObject{Filename: "file1.txt", Size: 12345, ContentType: "text/plain", Path: "/path/to/file1.txt"}}]
+if err != nil {
+	ctx.Response.Status(400).Json(map[string]any{"error": err.Error()})
+	return
+}
+ctx.Response.Status(200).Json(map[string]any{"files": files})
 ```
 
 ## Contributing
