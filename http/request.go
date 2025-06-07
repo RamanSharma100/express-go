@@ -42,8 +42,15 @@ func (req *Request) GetBody() any {
 		return req.Body
 	}
 
-	req.Body = req.r.Form
-
+	formData := make(map[string]interface{})
+	for key, values := range req.r.Form {
+		if len(values) > 1 {
+			formData[key] = values
+		} else {
+			formData[key] = values[0]
+		}
+	}
+	req.Body = formData
 	return req.Body
 }
 

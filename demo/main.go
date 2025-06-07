@@ -77,6 +77,38 @@ func main() {
 		ctx.Response.Status(200).Json(map[string]any{"files": files})
 	})
 
+	// session management routes
+	app.Get("/session-form", func(ctx *http.Context) {
+		ctx.Render("session-form.html", nil)
+	})
+
+	app.Post("/set-session", func(ctx *http.Context) {
+		body := ctx.Request.GetBody()
+
+		m, ok := body.(map[string]any)
+		if !ok {
+			ctx.Response.Status(400).Send("Invalid JSON body")
+			return
+		}
+		username, ok := m["username"].(string)
+		if !ok || username == "" {
+			ctx.Response.Status(400).Send("Username must be a non-empty string")
+			return
+		}
+		ctx.SetSessionData("username", username)
+		ctx.Response.Headers["Content-Type"] = "text/html"
+		ctx.Response.Send("Session set! <a href=\"/get-session\">Check session value</a>")
+	})
+
+	app.Get("/get-session", func(ctx *http.Context) {
+		val, ok := ctx.GetSessionData("username")
+		if ok {
+			ctx.Response.Send("Session username: " + val.(string) + `<br><a href="/session-form">Back</a>`)
+		} else {
+			ctx.Response.Send("No session value set for 'username'. <a href=\"/session-form\">Back</a>")
+		}
+	})
+
 	// use groups to add
 	app.Group("/test", []http.Middleware{middlewareTest1, middlewareTest2}, func(router *http.Router) {
 		router.Get("/", func(ctx *http.Context) {

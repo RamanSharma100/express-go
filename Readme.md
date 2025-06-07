@@ -42,14 +42,14 @@ A simple and lightweight MVC Web framework for Go, inspired by Node.js Express a
 - Rate limiting [in memory not redis implementation - will be added while caching support]
 - URL encoding/decoding [Available in Context]
 - Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session management
 
 ## Upcoming Features
 
 This is lot of work in progress and will be updated frequently. Some of the upcoming features include:
 
 - Custom Template Engine Support
-- Support for cookies
-- Session management
 - WebSocket support
 - Support for mixins
 - Support for plugins
@@ -393,6 +393,17 @@ func CompanyRouter() *http.Router {
 - `ctx.EncodeURL(urls ...string) string` - Encode URLs for safe transmission
 - `ctx.DecodeURL(url string) string` - Decode URLs from their encoded form
 - `ctx.GetUploadedFiles()` - Get uploaded files from the request (if any)
+- `ctx.SetCookie(name, value string, maxAge int, path, domain string, secure, httpOnly bool, Expires time.Time)` - Set a cookie in the response
+- `ctx.GetCookie(name string) (string, error)` - Get a cookie value by name
+- `ctx.ClearCookie(name string)` - Clear a cookie by name
+- `ctx.Request.Validate(rules map[string]string, data any) map[string]string` - Validate request data against rules
+- `ctx.Request.AdditionalFields` - Map for additional fields added by middleware or handlers
+- `ctx.Request.GetUploadedFiles()` - Get uploaded files from the request (if any)
+- `ctx.Request.r` - Get the underlying `http.Request`
+- ctx.GetSession() - Get the session data for the request (if session management is implemented)
+- `ctx.SetSessionData(key string, value any)` - Set session data for the request (if session management is implemented)
+- `ctx.GetSessionData(key string) (any, error)` - Get session data by key (if session management is implemented)
+- `ctx.DeleteSessionData(key string)` - Clear session data by key (if session management is implemented)
 
 ### Router
 

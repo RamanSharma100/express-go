@@ -112,12 +112,18 @@ func (ctx *Context) Render(tmpl string, data any) {
 		data = map[string]any{}
 	}
 
+	ctx.Response.Writer.Header().Set("Content-Type", "text/html; charset=utf-8")
+	ctx.Response.Writer.Header().Set("Cache-Control", "no-cache, no-store, must-revalidate")
+	ctx.Response.Writer.Header().Set("Pragma", "no-cache")
+	ctx.Response.Writer.Header().Set("Expires", "0")
+
 	err = t.Execute(ctx.Response.Writer, data)
 	if err != nil {
 		ctx.Response.Writer.WriteHeader(http.StatusInternalServerError)
 		ctx.Response.Writer.Write([]byte("Error executing template: " + err.Error()))
 		return
 	}
+
 }
 
 func (ctx *Context) Redirect(url string) {
