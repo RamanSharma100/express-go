@@ -39,7 +39,7 @@ A simple and lightweight MVC Web framework for Go, inspired by Node.js Express a
 - Support for query parameters
 - Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
 - Static file serving [need improvements]
-- Rate limiting
+- Rate limiting [in memory not redis implementation - will be added while caching support]
 
 ## Upcoming Features
 
@@ -357,6 +357,7 @@ func CompanyRouter() *http.Router {
 - `http.Router` - Router for handling routes
 - `http.CORS(options *CorsOptions)` - Middleware for handling CORS
 - `http.Logger()` - Get the global logger instance
+- `http.RateLimit(options *RateLimitOptions)` - Middleware for rate limiting
 
 ### Context
 
@@ -450,13 +451,47 @@ http.Logger().Debug("This is a debug message")
 
 CORS middleware is included to handle cross-origin requests. You can configure it with options:
 
-```go
+````go
 app.Use(http.CORS(&http.CorsOptions{
 	AllowOrigin: "*",
 	AllowMethods: "GET, POST, PUT, DELETE, OPTIONS",
 	AllowHeaders: "Content-Type, Authorization",
 	ContentType: "application/json",
 }))
+
+### Rate Limiting
+
+You can use the rate limiting middleware to limit the number of requests from a client:
+
+```go
+app.Use(http.RateLimit(&http.RateLimitOptions{
+	Limit:     100, // Maximum requests allowed
+	Window:    60,  // Time window in seconds
+	Remaining: 100, // Remaining requests allowed
+}))
+````
+
+### Error Handling
+
+You can set a custom error handler to handle errors globally:
+
+```go
+app.SetErrorHandler(func(ctx *http.Context, err error) {
+	fmt.Println("Custom Error Handler:", err)
+	ctx.Response.Status(500).Json(map[string]any{
+		"error":   err.Error(),
+		"message": "An error occurred from custom error handler",
+	})
+})
+```
+
+### Static File Serving
+
+You can serve static files using the `Static` middleware:
+
+```go
+app.Static("/static", "./public") // there are improvements needed
+```
 
 ## Contributing
 
@@ -467,4 +502,7 @@ Feel free to open issues for suggestions, bugs, or questions.
 ## License
 
 This project is licensed under the terms of the [MIT License](LICENSE).
+
+```
+
 ```
