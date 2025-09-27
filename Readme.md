@@ -544,3 +544,3501 @@ This project is licensed under the terms of the [MIT License](LICENSE).
 ```
 
 ```
+
+A simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session managementA simple and lightweight Web framework for Go, inspired by Node.js Express and PHP Laravel. It provides a minimalistic API for building web applications and APIs with ease.
+
+> - This is for educational purposes and is not intended for production use. It is a work in progress and may not be fully functional or secure.
+> - The API is inspired by Express.js and php laravel, but it is not a direct port. Some features may be different or missing.
+
+## Features
+
+- Simple routing (GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD)
+- Context-based request and response handling [More work needed]
+- Easy to use API inspired by Node.js Express
+- Add custom headers to requests and responses
+- Add additional fields to requests
+- Easily extendable and lightweight
+- JSON response support
+- Plain text response support
+- JSON parsing support
+- Parameterized routes
+- Nested routing
+- Create Router instances [For modular routing]
+- UseRouter function to use a router in the main application
+- HTML template rendering
+- Middleware support (global and route-specific)
+- Grouping of routes with middleware
+- Support for URL parameters
+- Middleware Chaining
+- Request validation
+- Embedding Middleware in Route groups
+- Custom Error handling [Panic handling]
+- CORS support
+- Request logging
+- Route naming
+- Support for query parameters
+- Route chaining [For now only `Name` is supported, more work needed to support other features like `Middleware`, etc.]
+- Static file serving [need improvements]
+- Rate limiting [in memory not redis implementation - will be added while caching support]
+- URL encoding/decoding [Available in Context]
+- Inbuilt File uploads [Inbuilt like multer , without buffer]
+- Support for cookies
+- Session management
